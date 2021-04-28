@@ -21,11 +21,11 @@ public class PeopleRepository {
         return repository.getByCityOfLiving(city);
     }
 
-    public List<Person> getPersonsWhoYoungerThenSpecifiedAge(int age) {
-        return repository.getByComposePersonIdAgeLessThan(age, Sort.by("composePersonId.age").ascending());
+    public List<Person> getPersonsWhoYoungerThanSpecifiedAge(int age) {
+        return repository.getPersonsWhoYoungerThanSpecifiedAge(age, Sort.by("composePersonId.age").ascending());
     }
 
     public Optional<Person> getPersonsByNameAndSurname(String name, String surname) {
-        return repository.getFirstByComposePersonIdNameAndComposePersonIdSurname(name, surname);
+        return repository.getFirstPersonByNameAndSurname(name, surname);
     }
 }
