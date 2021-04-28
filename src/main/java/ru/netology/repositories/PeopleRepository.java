@@ -21,7 +21,7 @@ public class PeopleRepository {
         return repository.getByCityOfLiving(city);
     }
 
-    public List<Person> getPersonsWhoYoungerThenSpecifiedAge(int age) {
+    public List<Person> getPersonsWhoYoungerThanSpecifiedAge(int age) {
         return repository.getByComposePersonIdAgeLessThan(age, Sort.by("composePersonId.age").ascending());
     }
 

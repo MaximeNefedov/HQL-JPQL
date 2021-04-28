@@ -32,8 +32,8 @@ public class PeopleController {
     }
 
     @GetMapping("younger-then-specified-age")
-    public ResponseEntity<String> getPersonsWhoYoungerThenSpecifiedAge(@RequestParam int age) {
-        val personsWhoYoungerThenSpecifiedAge = service.getPersonsWhoYoungerThenSpecifiedAge(age);
+    public ResponseEntity<String> getPersonsWhoYoungerThanSpecifiedAge(@RequestParam int age) {
+        val personsWhoYoungerThenSpecifiedAge = service.getPersonsWhoYoungerThanSpecifiedAge(age);
         val stringBuilder = new StringBuilder("Жители города, которые моложе " + age + " лет: ");
         personsWhoYoungerThenSpecifiedAge.forEach((person) -> stringBuilder.append(person.getComposePersonId().getName())
                 .append(", ")

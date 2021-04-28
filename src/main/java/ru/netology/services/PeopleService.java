@@ -25,8 +25,8 @@ public class PeopleService {
         return repository.getPersonsByCity(city);
     }
 
-    public List<Person> getPersonsWhoYoungerThenSpecifiedAge(int age) {
-        val personsWhoYoungerThenSpecifiedAge = repository.getPersonsWhoYoungerThenSpecifiedAge(age);
+    public List<Person> getPersonsWhoYoungerThanSpecifiedAge(int age) {
+        val personsWhoYoungerThenSpecifiedAge = repository.getPersonsWhoYoungerThanSpecifiedAge(age);
         if (personsWhoYoungerThenSpecifiedAge.isEmpty()) {
             throw new IllegalArgumentException(
                     "Моложе указанного возраста: " + "\"" + age + "\"" + " не найден ни один житель!"
